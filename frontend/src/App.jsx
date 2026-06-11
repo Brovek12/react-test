@@ -1,12 +1,15 @@
-import MainLayout from './components/layout/MainLayout'
-import CustomerList from './pages/Customer/CustomerList'
+import AppRoutes from './routes/AppRoutes'
 
-function App() {
+
+function App(){
+
     return (
-        <MainLayout>
-            <CustomerList />
-        </MainLayout>
+
+        <AppRoutes />
+
     )
+
 }
+
 
 export default App

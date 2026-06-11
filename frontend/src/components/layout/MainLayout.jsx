@@ -1,6 +1,8 @@
-import { NavLink } from 'react-router-dom'
 
-function MainLayout({ children }) {
+import { Outlet, NavLink } from 'react-router-dom'
+
+
+function MainLayout() {
     return (
         <div className="drawer lg:drawer-open">
             <input
@@ -26,9 +28,9 @@ function MainLayout({ children }) {
 
                 </nav>
 
-                <div className="p-6">
-                    {children}
-                </div>
+              <div className="p-6">
+    <Outlet />
+</div>
 
             </div>
 
@@ -52,7 +54,7 @@ function MainLayout({ children }) {
                     <ul className="menu w-full grow">
 
                         <li>
-                            <NavLink to="/">
+                            <NavLink to="/users">
                                 <span>🏠</span>
 
                                 <span className="is-drawer-close:hidden">
@@ -72,7 +74,7 @@ function MainLayout({ children }) {
                         </li>
 
                         <li>
-                            <NavLink to="/products">
+                            <NavLink to="/users">
                                 <span>📦</span>
 
                                 <span className="is-drawer-close:hidden">
