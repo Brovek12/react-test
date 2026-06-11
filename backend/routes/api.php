@@ -7,3 +7,11 @@ use App\Http\Controllers\CustomerController;
 
 
 Route::apiResource('customers', CustomerController::class);
+
+use App\Http\Controllers\AuthController;
+
+
+Route::post(
+    '/login',
+    [AuthController::class,'login']
+);
